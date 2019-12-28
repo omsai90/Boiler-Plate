@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:head>
+	<link rel="stylesheet"
+		href="../resources/css/bootstrap.min.css" />
+	<script src="../resources/js/bootstrap.min.js"></script>
+	<script src="../resources/js/jquery.min.js"></script>
+	<link rel="stylesheet" href="../resources/css/style.css" />
+	<link rel="stylesheet"
+		href="../resources/css/fontawesome.css" />
+</h:head>
+<h:body>
+	<div class="container">
+		<div class="d-flex justify-content-center h-100">
+			<div class="card">
+				<div class="card-header">
+					<h3>Sign In</h3>
+					<div class="d-flex justify-content-end social_icon">
+<!-- 						<span><i class="fab fa-facebook-square"></i></span> <span><i -->
+<!-- 							class="fab fa-google-plus-square"></i></span> <span><i -->
+<!-- 							class="fab fa-twitter-square"></i></span> -->
+					</div>
+				</div>
+				<div class="card-body">
+					<h:form>
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<h:inputText value="#{loginBean.userId}" id="usernameLogin"
+								pt:placeholder="Enter User name" styleClass="form-control" />
+
+						</div>
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<h:inputSecret value="#{loginBean.password}" id="passwordLogin"
+								pt:placeholder="Enter Password" styleClass="form-control" />
+						</div>
+						<div class="row align-items-center remember">
+<!-- 							<p:checkbox>Remember Me</p:checkbox> -->
+						</div>
+						<div class="form-group">
+							<p:commandButton value="Login" id="btnLogin"
+								action="#{loginBean.doLogin}"
+								styleClass="btn btn-primary active myButton">
+							</p:commandButton>
+						</div>
+					</h:form>
+				</div>
+				<div class="card-footer">
+					<div class="d-flex justify-content-center links">
+						Don't have an account?<a href="#">Sign Up</a>
+					</div>
+					<div class="d-flex justify-content-center">
+						<a href="#">Forgot your password?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</h:body>
+</html>
